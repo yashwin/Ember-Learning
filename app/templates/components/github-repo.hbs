@@ -1,6 +1,11 @@
-{{yield}}
+{{#link-to 'org.repo.issues' repo.name}}
 
-{{link-to repo.name 'org.repo.issues' repo.name}}
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    {{repo.name}}
+  {{/if}}
+{{/link-to}} 
 
 <span class="grey-text">
 (
